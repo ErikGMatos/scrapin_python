@@ -1,8 +1,10 @@
 # primeira aula
 import requests
+#import webbrowser
 from bs4 import BeautifulSoup
 
 url = 'http://servicos2.sjc.sp.gov.br/servicos/horario-e-itinerario.aspx?acao=p&opcao=0&txt=307'
+#webbrowser.open(url)
 
 r = requests.get(url)
 soup = BeautifulSoup(r.text, 'lxml')
