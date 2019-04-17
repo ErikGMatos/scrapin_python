@@ -11,4 +11,4 @@ print(token)
 
 r = requests.post("urlpost",
                   data={"__RequestVerificationToken": token, "Usuario": "user", "Password": "123"})
-print(r.cookies)
+print(r.text)
