@@ -1,14 +1,17 @@
 import requests
 from bs4 import BeautifulSoup
+import time
 
-g = requests.get('urlget')
-print(g.cookies)
-soup = BeautifulSoup(g.text, 'lxml')
+r = requests.post("https://station.rocketseat.com.br/api/sessions",
+                  data={"email": "erik_senac@hotmail.com", "password": "0p9o8i7u"})
+token = r.json()['token']
+headers = {
+    'Authorization': 'Bearer '+token
+}
 
-token = soup.find("input", {"name": "__RequestVerificationToken"})["value"]
+requests.get('https://station.rocketseat.com.br/api/account', headers=headers)
 
-print(token)
+r_page_main = requests.get('https://station.rocketseat.com.br/dashboard')
 
-r = requests.post("urlpost",
-                  data={"__RequestVerificationToken": token, "Usuario": "user", "Password": "123"})
-print(r.text)
+time.sleep(5)
+print(r_page_main.text)
