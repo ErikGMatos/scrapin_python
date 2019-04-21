@@ -1,9 +1,9 @@
 """Exemplo de Page Object no google.com"""
+import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait as wait
-import time
 # from selenium.webdriver.chrome.options import Options
 # chrome_options = Options()
 # chrome_options.add_argument("--headless")
@@ -34,7 +34,6 @@ class Google:
     def lucky(self, browser, word='None'):
         self.driver.find_element_by_name(
         self.searchBar).send_keys(word)
-        #time.sleep(10) #aguarda o tempo descrito para prosseguir
         actions = ActionChains(browser)
         actions.send_keys(Keys.TAB)
         actions.perform()
