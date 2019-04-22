@@ -23,7 +23,7 @@ class legco(scrapy.Spider):
 
     def download_files(self, response):
         path = response.url.split('/')[-1]
-        dirf = r"C:\Users\Erik\Desktop\testedoc"
+        dirf = r"C:\Users\ToPath"
         if not os.path.exists(dirf):os.makedirs(dirf)
         os.chdir(dirf)
         with open(path, 'wb') as f:
