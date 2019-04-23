@@ -3,7 +3,7 @@ server = '172.16.10.50'
 database = 'CaptacaoConversaoGraduacao' 
 username = 'sa' 
 password = 'homologacao' 
-cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
+cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()
 
 cursor.execute('''
