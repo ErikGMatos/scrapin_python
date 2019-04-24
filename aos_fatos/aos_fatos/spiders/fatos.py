@@ -10,6 +10,7 @@ import scrapy
 #import w3lib.html
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
+#from scrapy_splash import SplashRequest  # Para reuisicoes onde precisa executar javascript
 
 class FatosSpider(CrawlSpider):
     name = 'fatos'
