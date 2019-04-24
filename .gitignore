@@ -1,5 +1,7 @@
 __pycache__
 *.log
 *.stackdump
-.venv/*
+.venv
 .scrapy
+build
+project.egg-info
