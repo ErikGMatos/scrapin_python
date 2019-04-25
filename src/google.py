@@ -41,6 +41,7 @@ class Google:
 
 
 browserChrome = webdriver.Chrome()
+browserChrome.maximize_window()
 g = Google(browserChrome)
 g.navigate()
 g.search(browserChrome, 'Live de Python')
