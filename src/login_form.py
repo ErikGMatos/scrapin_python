@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import time
 
 r = requests.post("https://station.rocketseat.com.br/api/sessions",
-                  data={"email": "erik_senac@hotmail.com", "password": "0p9o8i7u"})
+                  data={"email": "erik@h.com", "password": "000"})
 token = r.json()['token']
 headers = {
     'Authorization': 'Bearer '+token

@@ -18,6 +18,7 @@ docker-pycreds==0.4.0
 hyperlink==19.0.0
 idna==2.8
 incremental==17.5.0
+ipdb==0.12
 ipython==7.4.0
 ipython-genutils==0.2.0
 jedi==0.13.3
